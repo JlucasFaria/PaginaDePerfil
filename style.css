@@ -1,0 +1,163 @@
+:root {
+  --primary-color: #2c3e50; /* Azul escuro acinzentado */
+  --secondary-color: #bdc3c7; /* Cinza claro */
+  --background-color-light: #ecf0f1; /* Fundo claro */
+  --background-color-dark: #2f3640; /* Fundo escuro */
+  --text-color-dark: #34495e; /* Texto escuro para partes claras */
+  --text-color-light: #ffffff; /* Texto claro para partes escuras */
+  --accent-color: #95a5a6; /* Cinza médio para detalhes */
+}
+
+[data-theme="dark"] {
+  --primary-color: #1e272e; /* Cinza muito escuro */
+  --secondary-color: #576574; /* Cinza médio */
+  --background-color-light: #2f3640; /* Fundo escuro */
+  --background-color-dark: #1e272e; /* Fundo ainda mais escuro */
+  --text-color-dark: #ffffff; /* Texto branco para partes claras */
+  --text-color-light: #ffffff; /* Texto claro para todas as partes escuras */
+  --accent-color: #718093; /* Azul acinzentado para detalhes */
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color-light);
+  color: var(--text-color-dark); /* Texto escuro para partes claras */
+  line-height: 1.8;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+[data-theme="dark"] body {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-light); /* Texto claro para o tema escuro */
+}
+
+header {
+  background-color: var(--primary-color);
+  color: var(--text-color-light); /* Texto claro para o tema escuro */
+  text-align: center;
+  padding: 1.5rem 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+}
+
+.perfil-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.perfil {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 3px solid var(--secondary-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.descricao {
+  margin: 1.5rem 0;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.hobbies {
+  list-style-type: none;
+  padding: 0;
+}
+
+.hobbies h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+}
+
+.hobbies li {
+  background-color: var(--accent-color);
+  color: var(--text-color-light); /* Texto claro para li no tema claro */
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border-radius: 8px;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .hobbies li {
+  color: var(--text-color-light); /* Texto claro para tema escuro */
+}
+
+.rede-social {
+  display: inline-block;
+  margin-top: 1.5rem;
+  color: var(--text-color-light); /* Texto claro para o botão no tema claro */
+  background-color: var(--primary-color);
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .rede-social {
+  color: var(--text-color-light); /* Texto claro para tema escuro */
+}
+
+.rede-social:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-3px);
+}
+
+button {
+  margin-top: 2rem;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--text-color-light); /* Texto claro para o tema escuro */
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] button {
+  color: var(--text-color-dark); /* Texto escuro para tema escuro */
+}
+
+button:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-3px);
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: var(--text-color-light); /* Texto claro para o tema escuro */
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: auto;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] footer {
+  color: var(--text-color-light); /* Texto claro para tema escuro */
+}
